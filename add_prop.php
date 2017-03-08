@@ -139,6 +139,9 @@ if (isset($_SESSION["user_name"]))
 			if (isset($_POST['district']) && $_POST['district'] != "")
 			{
 				$get_district = $_POST['district'];
+				$ya = "INSERT INTO `property` (`property_id`, `category`, `location`, `city`, `district`, `price`, `user_email`,`latitude`, `longitude`) VALUES (NULL, '" . $get_category . "', '" . $get_area . "', '" . $get_district . "', '" . $get_district . "', '" . $get_price . "', '" . $use . "', '" . $get_latitude . "', '" . $get_longitude . "');";
+							
+							
 				if (isset($_POST['category']) && $_POST['category'] != "")
 				{
 					$get_category = $_POST['category'];
@@ -154,8 +157,7 @@ if (isset($_SESSION["user_name"]))
 						if (isset($_POST['longitude']) && $_POST['longitude'] != "")
 						{
 							$get_area = $_POST['area'];
-							$ya = "INSERT INTO `property` (`property_id`, `category`, `location`, `city`, `district`, `price`, `user_email`,`latitude`, `longitude`) VALUES (NULL, '" . $get_category . "', '" . $get_area . "', '" . $get_district . "', '" . $get_district . "', '" . $get_price . "', '" . $use . "', '" . $get_latitude . "', '" . $get_longitude . "');";
-											 include 'database.php';
+							include 'database.php';
 							if (mysqli_connect_errno())
 							{
 								echo "MySQLi Connection was not established: " . mysqli_connect_error();

@@ -225,7 +225,7 @@ else
 /*$full_review = "";
 $summary = "";
 $star = "";
-$con = mysqli_connect("localhost", "root", "", "adco");
+include 'database.php';
 
 if (isset($_POST['location']))
 {
@@ -238,7 +238,7 @@ if (isset($_POST['location']))
 			if (isset($_POST['full_review']))
 			{
 				$full_review = $_POST['full_review'];
-				$con = mysqli_connect("localhost", "root", "", "adco");
+				include 'database.php';
 				if (mysqli_connect_errno())
 				{
 					echo "MySQLi Connection was not established: " . mysqli_connect_error();

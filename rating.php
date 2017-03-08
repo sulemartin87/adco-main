@@ -211,7 +211,7 @@ if (isset($_SESSION["user_name"]))
 				if (isset($_GET['full_review']))
 				{
 					$full_review = $_GET['full_review'];
-					$con = mysqli_connect("localhost", "root", "", "adco");
+					include 'database.php';
 					if (mysqli_connect_errno())
 					{
 						echo "MySQLi Connection was not established: " . mysqli_connect_error();

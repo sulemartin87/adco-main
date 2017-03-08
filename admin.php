@@ -167,7 +167,7 @@ session_start();
 							  text-anchor="middle" dy="0.1">82<tspan dy="-0.07" font-size="0.2">%</tspan></text>
 							</svg>
 						  </div> !--> ';
-						$con = mysqli_connect("localhost", "adcomw_admin", "admin100%", "adcomw_adco");
+						include 'database.php';
 						if (mysqli_connect_errno())
 						{
 							echo "MySQLi Connection was not established: " . mysqli_connect_error();
