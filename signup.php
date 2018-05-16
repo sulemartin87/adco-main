@@ -140,7 +140,7 @@ if(isset($_SESSION['name']))
 				<span class="mdl-layout-title"><a class="mdl-navigation__link" href="index.php" style="font-size: 20px; margin-left:30%;">Go Home</span></a>
 				</div>
 				</div>';
-				$sq = "INSERT INTO `adco`.`users` (`user_id`, `user_name`, `user_pass`, `full_name`) VALUES (NULL, '".$_SESSION['email']."', '".$_SESSION['pass']."', '".$_SESSION['name']."');";
+				$sq = "INSERT INTO `adco`.`users` (`user_id`, `user_name`, `user_pass`) VALUES (NULL, '".$_SESSION['email']."', '".$_SESSION['pass']."');";
 				if (mysqli_query($con, $sq)) 
 				{
 					$username = $_SESSION['email'];
@@ -154,7 +154,7 @@ if(isset($_SESSION['name']))
 					unset($_SESSION['email']);
 					unset($_SESSION['name']);
 					unset($_SESSION['pass']);
-					echo "Error: " . $ql . "<br>" . mysqli_error($con);
+					echo "Error: " . $sq . "<br>" . mysqli_error($con);
 				}
 				
 				
